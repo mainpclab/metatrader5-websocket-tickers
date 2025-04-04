@@ -48,21 +48,24 @@ There are some print statements in the code to help you debug.
 
 # Extra
 
-For testing purposes it's useful to have a temporary WebSocketServer running.
-To do this, I suggest you use `wscat` and `untun`:
+## Start A Local, Temporary WebSocket Server
+While developing, it's useful to have a temporary WebSocketServer running to monitor if the Expert Advisor is properly sending ticker updates. \
+For this, I suggest you use `wscat`:
 
-Start a temporary websocket server on localhost:
+Starts a temporary WebSocket server on your local machine:
 ```
 npx wscat -l 8080
 ```
-
-Expose localhost to public traffic using CloudFlare (Free)
+Then, use `untun` to expose to local server for incoming public traffic. \
+Uses CloudFlare, Free:
 ```
 npx untun@latest tunnel http://localhost:8080
 ```
-It will return a random url that tunnels public traffic to your local machine.
-Use the url you get from CloudFlare in the `Tools` > `Options` dialog (whitelist).
-Fill in the url as an input for the Expert Advisor.
+![Tunnel](/Readme-assets/Tunnel.png)
+
+It will return a random url that tunnels public traffic to your local machine. \
+Use the url you get from CloudFlare in the `Tools` > `Options` dialog (whitelist). \
+Fill in the url as an input for the Expert Advisor. \
 If connection doesn't work try different variations in both the `Tools > Option` whitelist dialog as the input websocket parameter:
 
 - `http://random-url.trycloudflare.com`
