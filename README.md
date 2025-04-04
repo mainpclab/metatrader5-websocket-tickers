@@ -61,10 +61,10 @@ npx untun@latest tunnel http://localhost:8080
 ```
 ![Tunnel](/Readme-assets/Tunnel.png)
 
-Untun will return a public url that routes public traffic to your local machine. \
+Untun will return a public url that routes public traffic to your local machine.
 
-- Use the public url in the `Tools > Options` dialog (whitelist) \
-- Fill in the public url as an input for the Expert Advisor \
+- Use the public url in the `Tools > Options` dialog (whitelist)
+- Fill in the public url as an input for the Expert Advisor
 
 If connection fails, try different variations of the same url in both the `Tools > Options` (whitelist dialog) and the EA input parameter (WebSocket address):
 
