@@ -62,9 +62,11 @@ npx untun@latest tunnel http://localhost:8080
 ![Tunnel](/Readme-assets/Tunnel.png)
 
 It will return a random url that tunnels public traffic to your local machine. \
-Use the url you get from CloudFlare in the `Tools` > `Options` dialog (whitelist). \
-Fill in the url as an input for the Expert Advisor. \
-If connection doesn't work try different variations in both the `Tools > Option` whitelist dialog as the input websocket parameter:
+
+- Use the url you get from CloudFlare in the `Tools > Options` dialog (whitelist). \
+- Fill in the url as an input for the Expert Advisor. \
+
+If connection doesn't work try different variations of the url in both the `Tools > Option` whitelist dialog and the EA input websocket parameter:
 
 - `http://random-url.trycloudflare.com`
 - `https://random-url.trycloudflare.com`
