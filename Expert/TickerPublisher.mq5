@@ -14,7 +14,7 @@
 // Input parameters
 input string   WebSocketServer = "http://hostname.domain";  // WebSocket server address
 
-// Hardcoded array of symbols to monitor from the market watch
+// Hardcoded array of symbols to monitor from the Market Watch
 string g_SymbolsToMonitor[] = {
   "EURUSD.pro",
   "GBPUSD.pro",
