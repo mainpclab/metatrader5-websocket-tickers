@@ -3,13 +3,13 @@
 //|                                    Copyright 2025, Solid Signals |
 //|                                         https://solidsignals.xyz |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2025, Solid Signals"
+#property copyright "Copyright 2025, Solid Signals / polyclick"
 #property link      "https://solidsignals.xyz"
 #property version   "1.00"
 #property strict
 
 #include "WebSocketService.mqh"
-#include "Include/JAson.mqh"
+#include <JAson.mqh>
 
 //+------------------------------------------------------------------+
 //| Class to monitor market symbols and publish price changes         |

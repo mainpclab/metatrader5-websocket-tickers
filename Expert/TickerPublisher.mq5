@@ -3,7 +3,7 @@
 //|                                    Copyright 2025, Solid Signals |
 //|                                         https://solidsignals.xyz |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2025, Solid Signals"
+#property copyright "Copyright 2025, Solid Signals / polyclick"
 #property link      "https://solidsignals.xyz"
 #property version   "1.00"
 #property strict
@@ -14,9 +14,7 @@
 // Input parameters
 input string   WebSocketServer = "http://hostname.domain";  // WebSocket server address
 
-// Hardcoded array of symbols to monitor
-// Make sure symbols are also in the Market Watch
-//  => Expert Advisor only has access to symbols in the market watch list
+// Hardcoded array of symbols to monitor from the market watch
 string g_SymbolsToMonitor[] = {
   "EURUSD.pro",
   "GBPUSD.pro",
