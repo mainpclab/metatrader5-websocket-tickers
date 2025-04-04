@@ -56,14 +56,14 @@ Start a temporary websocket server on localhost:
 npx wscat -l 8080
 ```
 
-Expose localhost for public using CloudFlare (Free)
+Expose localhost to public traffic using CloudFlare (Free)
 ```
 npx untun@latest tunnel http://localhost:8080
 ```
 It will return a random url that tunnels public traffic to your local machine.
 Use the url you get from CloudFlare in the `Tools` > `Options` dialog (whitelist).
 Fill in the url as an input for the Expert Advisor.
-If connection doesn't work try different variations:
+If connection doesn't work try different variations in both the `Tools > Option` whitelist dialog as the input websocket parameter:
 
 - `http://random-url.trycloudflare.com`
 - `https://random-url.trycloudflare.com`
@@ -71,6 +71,6 @@ If connection doesn't work try different variations:
 - `wss://random-url.trycloudflare.com`
 
 # Getting help
-Open an issue, or;
-Check out our website: Solid Signals — [https://solidsignals.xyz](https://solidsignals.xyz)
-Join us on Discord: [https://discord.gg/NMVSE5mGkX](https://discord.gg/NMVSE5mGkX)
+- Open an issue, or;
+- Check out our website: Solid Signals — [https://solidsignals.xyz](https://solidsignals.xyz)
+- Join us on Discord: [https://discord.gg/NMVSE5mGkX](https://discord.gg/NMVSE5mGkX)
