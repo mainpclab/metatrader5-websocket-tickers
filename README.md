@@ -7,8 +7,7 @@ An example on how to push real-time ticker updates from MetaTrader 5 over WebSoc
 - ⚡️ Sets a super tight update interval to have near-zero latency ticker updates
 - 📚 Uses JAson library to serialize/deserialize json
 
-In use for our trade signaling website: [https://solidsignals.xyz](https://solidsignals.xyz) — Consistent Profitable Trades.
-
+In use for our trade signaling website: [https://solidsignals.xyz](https://solidsignals.xyz) — Consistent Profitable Trades.\
 Written in MQL5, developed by polyclick
 
 # Instructions
@@ -27,16 +26,14 @@ When installed correctly your file structure should look like this:
 
 ## 3. Create your custom Expert Advisor folder & Copy files
 
-Create your own custom Expert Advisor folder under `/MQL5/Experts/{FOLDER_NAME}`
-
+Create your own custom Expert Advisor folder under `/MQL5/Experts/{FOLDER_NAME}` \
 Copy everything in this repo from `Expert/` into your custom folder
 
 ![Include](/Readme-assets/Expert.png)
 
 ## 4. Compile
 
-Compile & pray 🙏🏼
-
+Compile & pray 🙏🏼 \
 Fix any include path issues
 
 ## 6. Whitelist the WebSocket url in Tools > Options
@@ -45,7 +42,7 @@ Fix any include path issues
 
 ## 7. Attach compiled expert to any chart
 
-Although the Expert Advisor doesn't really use the onTick() event, we need to add it to a chart to start its execution.
+Although the Expert Advisor doesn't really use the `onTick()` event, we need to add it to a chart to start its execution.
 
 There are some print statements in the code to help you debug.
 
