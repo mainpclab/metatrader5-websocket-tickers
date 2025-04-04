@@ -8,7 +8,8 @@ An example on how to push real-time ticker updates from MetaTrader 5 over WebSoc
 - 📚 Uses JAson library to serialize/deserialize json
 
 In use for our trade signaling website: [https://solidsignals.xyz](https://solidsignals.xyz) — Consistent Profitable Trades.
-Written in MQL5, developed by @polyclick
+
+Written in MQL5, developed by polyclick
 
 # Instructions
 ## 1. Download this github project
@@ -24,17 +25,18 @@ When installed correctly your file structure should look like this:
 
 ![Include](/Readme-assets/Include.png)
 
-## 3. Create your custom Expert Advisor folder
+## 3. Create your custom Expert Advisor folder & Copy files
 
 Create your own custom Expert Advisor folder under `/MQL5/Experts/{FOLDER_NAME}`
 
-## 4. Copy the code over into your new folder
-
 Copy everything in this repo from `Expert/` into your custom folder
 
-## 5. Compile
+![Include](/Readme-assets/Expert.png)
+
+## 4. Compile
 
 Compile & pray 🙏🏼
+
 Fix any include path issues
 
 ## 6. Whitelist the WebSocket url in Tools > Options
