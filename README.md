@@ -49,15 +49,13 @@ There are some print statements in the code to help you debug.
 # Extra
 
 ## Start A Local, Temporary WebSocket Server
-While developing, it's useful to have a temporary WebSocketServer running to monitor if the Expert Advisor is properly sending ticker updates. \
-For this, I suggest you use `wscat`:
+During development, setting up a temporary WebSocket server helps monitoring the sent Expert Advisor messages. For this, I suggest you use `wscat`:
 
 Starts a temporary WebSocket server on your local machine:
 ```
 npx wscat -l 8080
 ```
-Then, use `untun` to expose to local server for incoming public traffic. \
-Uses CloudFlare, Free:
+Then, use `untun` to expose the local server for incoming public traffic using CloudFlare (Free):
 ```
 npx untun@latest tunnel http://localhost:8080
 ```
