@@ -5,10 +5,15 @@ An example on how to push real-time ticker updates from MetaTrader 5 over WebSoc
 
 - 📘 Uses the robust WebSocket library implementation found in the MQL5 Book
 - ⚡️ Sets a super tight update interval to have near-zero latency ticker updates
+- 🚚 Combines ticker updates for symbols that changed in the same interval
 - 📚 Uses JAson library to serialize/deserialize json
 
-In use for our trade signaling website: [https://solidsignals.xyz](https://solidsignals.xyz) — Consistent Profitable Trades.\
-Written in MQL5, developed by polyclick
+In use for our trade signaling website: [https://solidsignals.xyz](https://solidsignals.xyz) — Consistent Profitable Trades\
+Written in MQL5, by polyclick
+
+# Important
+
+MetaTrader 5 limits the symbols we can track. You can only request data from symbols that are listed in the Market Watch window. Keep this in mind when configuring the Expert Advisor. You'll find an array of strings for the symbols you want to track. Make sure you add those symbols in the Market Watch. Make sure the symbol name in the script is spelled correctly.
 
 # Instructions
 ## 1. Download this github project
